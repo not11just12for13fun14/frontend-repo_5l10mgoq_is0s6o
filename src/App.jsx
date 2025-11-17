@@ -1,71 +1,50 @@
+import React from "react"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import Agents from "./components/Agents"
+import Benefits from "./components/Benefits"
+import HowItWorks from "./components/HowItWorks"
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <main>
+        <Hero />
+        <Agents />
+        <Benefits />
+        <HowItWorks />
 
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
+        <section className="relative py-20 bg-amber-900">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-amber-50">Give your business a hive that never stops working</h2>
+                <p className="mt-3 text-amber-100/80 max-w-xl">Get early access to wrkrBee ai and start delegating outcomes to a coordinated swarm of specialists.</p>
               </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
+              <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
+                <input placeholder="Enter your work email" className="h-12 w-full sm:w-80 rounded-lg border border-amber-700/60 bg-amber-800/60 px-4 text-amber-50 placeholder:text-amber-200/60 focus:outline-none focus:ring-2 focus:ring-amber-400/60" />
+                <button className="h-12 rounded-lg bg-amber-400 px-6 text-amber-900 font-semibold shadow hover:bg-amber-300 transition">Request invite</button>
               </div>
             </div>
           </div>
+          <div aria-hidden className="absolute inset-x-0 -bottom-8 h-16 bg-gradient-to-b from-amber-900 to-amber-950/0" />
+        </section>
+      </main>
 
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
+      <footer className="bg-amber-50 border-t border-amber-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-amber-300 to-yellow-500">
+              <svg viewBox="0 0 24 24" className="h-4 w-4 text-amber-900" fill="currentColor" aria-hidden>
+                <path d="M12 2l8 4.6v9.2L12 20 4 15.8V6.6L12 2zm0 2.3L6 7v6.8l6 3.2 6-3.2V7l-6-2.7z"/>
+              </svg>
+            </span>
+            <span className="font-semibold text-amber-900">wrkrBee <span className="text-amber-600">ai</span></span>
           </div>
+          <p className="text-sm text-amber-900/70">© {new Date().getFullYear()} wrkrBee ai. All rights reserved.</p>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
